@@ -4,6 +4,9 @@ Exemple de teme:
 -vanzare de bilete online(client, eveniment, locatie)
 -admitere (candidat, facultate, examen)
 -biblioteca (carti, autori, imprumuturi, cititori)
--gestiunea unei sali de sport (abonati, antrenori, abonamente
+-gestiunea unei sali de sport (abonati, antrenori, abonamente)
 -credite (client, credit, rate)
 -activitatea unei case de schimb valutar (valute, istoric curs, clienti, tranzactii)
+
+link jdk:
+https://javaalmanac.io/jdk/download/#product=all&version=21&type=jdk&platform=all
