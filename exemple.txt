@@ -1,0 +1,9 @@
+Exemple de teme:
+-cabinet medical (pacienti, medici, retete)
+-rezervare loc in sala de film (film, loc, client)
+-vanzare de bilete online(client, eveniment, locatie)
+-admitere (candidat, facultate, examen)
+-biblioteca (carti, autori, imprumuturi, cititori)
+-gestiunea unei sali de sport (abonati, antrenori, abonamente
+-credite (client, credit, rate)
+-activitatea unei case de schimb valutar (valute, istoric curs, clienti, tranzactii)
