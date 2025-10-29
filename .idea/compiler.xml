@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="hello-world-spring" />
+        <module name="l02-01" />
       </profile>
     </annotationProcessing>
   </component>
