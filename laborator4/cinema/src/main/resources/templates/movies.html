@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Title of the document</title>
+</head>
+
+<body>
+
+<h1>Today screenings:</h1>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Duration</th>
+        <th>Delete</th>
+    </tr>
+
+    <tr th:each="movie : ${movies}">
+        <td th:text="${movie.getName()}">Movie Name</td>
+        <td th:text="${movie.getDuration()}">Movie Duration</td>
+        <td>
+            <a th:href="@{/movies/delete/{id}(id=${movie.getId()})}">Delete</a>
+        </td>
+    </tr>
+</table>
+
+<br>
+<br>
+
+<form th:action="@{/movies/add}" th:object="${newMovie}" method="post">
+
+    <label for="name">Movie Name:</label>
+    <input type="text" id="name" th:field="*{name}"/><br><br>
+
+    <label for="duration">Duration:</label>
+    <input type="text" id="duration" th:field="*{duration}"/><br><br>
+
+    <input type="submit" value="Add Movie"/>
+</form>
+</body>
+
+</html>
