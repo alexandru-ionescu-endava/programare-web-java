@@ -1,0 +1,15 @@
+meta {
+  name: external
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://localhost:8080/api/products/external
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

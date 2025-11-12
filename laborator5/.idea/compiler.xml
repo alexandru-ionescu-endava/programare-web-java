@@ -6,11 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="l03-01" />
         <module name="product-store" />
-        <module name="hello-world-spring" />
-        <module name="l02-02" />
-        <module name="l02-01" />
       </profile>
     </annotationProcessing>
   </component>

@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9bbeb48-8ae2-4801-8b48-6f95a4864473" name="Changes" comment="added laborator1" />
+    <list default="true" id="a9bbeb48-8ae2-4801-8b48-6f95a4864473" name="Changes" comment="added laborator1">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <list id="0fd6ee0a-55ed-4cf8-81d7-176519bb4e20" name="do not commit" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +76,7 @@
       <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="/Library/Java/JavaVirtualMachines/jdk-21.0.2.jdk/Contents/Home" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -101,6 +103,13 @@
       <option name="filePath" />
       <method v="2" />
     </configuration>
+    <configuration name="ProductStoreApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="product-store" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.ProductStoreApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
@@ -111,6 +120,7 @@
     <attachedChunks>
       <set>
         <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.27397.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.27397.103" />
       </set>
     </attachedChunks>
   </component>
@@ -132,6 +142,8 @@
       <workItem from="1760956673457" duration="136000" />
       <workItem from="1761066857707" duration="802000" />
       <workItem from="1762265413038" duration="68000" />
+      <workItem from="1762277987577" duration="145000" />
+      <workItem from="1762933329192" duration="58000" />
     </task>
     <task id="LOCAL-00001" summary="added laborator1">
       <option name="closed" value="true" />
