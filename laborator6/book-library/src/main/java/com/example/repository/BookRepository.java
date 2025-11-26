@@ -3,10 +3,7 @@ package com.example.repository;
 import com.example.model.Book;
 import org.springframework.stereotype.Component;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Random;
+import java.util.*;
 
 import static java.util.Objects.isNull;
 
@@ -18,26 +15,26 @@ public class BookRepository {
 
     public BookRepository() {
 
-        save(Book.builder()
+        saveOrUpdate(Book.builder()
                 .title("Fratii Karamazov")
                 .author("Dostoievski")
                 .pages(790)
                 .build());
 
-        save(Book.builder()
+        saveOrUpdate(Book.builder()
                 .title("Crima si pedeapsa")
                 .author("Dostoievski")
                 .pages(900)
                 .build());
 
-        save(Book.builder()
+        saveOrUpdate(Book.builder()
                 .title("Anna Karenina")
                 .author("Tolstoi")
                 .pages(1000)
                 .build());
     }
 
-    public Book save(Book book) {
+    public Book saveOrUpdate(Book book) {
         if (isNull(book.getId())) {
             Integer id = new Random().nextInt(1, 50);
             book.setId(id);
@@ -67,5 +64,9 @@ public class BookRepository {
                     return true;
                 })
                 .toList();
+    }
+
+    public Optional<Book> findById(Integer id) {
+        return Optional.ofNullable(storage.get(id));
     }
 }
