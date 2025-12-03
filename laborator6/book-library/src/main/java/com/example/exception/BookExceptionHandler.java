@@ -25,6 +25,13 @@ public class BookExceptionHandler {
         return ResponseEntity.badRequest().body(errors);
     }
 
+    @ExceptionHandler(BookBatchValidationException.class)
+    public ResponseEntity<?> handleBookBatchValidationException(BookBatchValidationException exception) {
+        return ResponseEntity
+                .status(HttpStatus.BAD_REQUEST)
+                .body(exception.getErrorList());
+    }
+
     @ExceptionHandler(UserNotAllowedException.class)
     public ResponseEntity<?> handleUserNotAllowedException(UserNotAllowedException exception) {
         return ResponseEntity

@@ -4,8 +4,11 @@ package com.example.controller;
 import com.example.exception.UserNotAllowedException;
 import com.example.model.Book;
 import com.example.model.BookDTO;
+import com.example.model.BookUpdateDTO;
 import com.example.service.BookService;
+import com.example.util.BookValidator;
 import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,19 +17,17 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Map;
 
+@RequiredArgsConstructor
 @RestController
 @RequestMapping("/api/book")
 public class BookController {
 
     private final BookService bookService;
+    private final BookValidator bookValidator;
 
-    @Autowired
-    public BookController(BookService bookService) {
-        this.bookService = bookService;
-    }
 
     //    deserialize JSON to java object (BookDTO)
-//    serialize java object to JSON
+    //    serialize java object to JSON
     @PostMapping
     public ResponseEntity<?> add(@RequestBody BookDTO request,
                                  @RequestHeader("Username") String username) {
@@ -77,16 +78,18 @@ public class BookController {
     }
 
 
-//    TODO
-//    @PutMapping
-//    public ResponseEntity<?> batchUpdate(@Valid @RequestBody List<BookDTO> requestList) {
-//
-//        for (BookDTO bookDTO : requestList) {
-//            bookService.replaceBook(bookDTO.id(), bookDTO);
-//        }
-//
-//        return ResponseEntity.ok(requestList);
-//    }
+    @PutMapping
+    public ResponseEntity<?> batchUpdate(@RequestBody List<BookUpdateDTO> requestList) {
+
+        if (requestList != null && !requestList.isEmpty()) {
+            bookValidator.validateBooks(requestList);
+
+            List<Book> updatedList = bookService.batchUpdate(requestList);
+            return ResponseEntity.ok(updatedList);
+        }
+
+        return ResponseEntity.badRequest().body("Request list is empty");
+    }
 
 
 }
