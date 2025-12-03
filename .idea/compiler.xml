@@ -9,6 +9,7 @@
         <module name="l03-01" />
         <module name="product-store" />
         <module name="hello-world-spring" />
+        <module name="book-library" />
         <module name="l02-02" />
         <module name="l02-01" />
       </profile>
@@ -16,6 +17,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="book-library" options="-parameters" />
       <module name="product-store" options="-parameters" />
     </option>
   </component>
