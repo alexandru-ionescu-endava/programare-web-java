@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9bbeb48-8ae2-4801-8b48-6f95a4864473" name="Changes" comment="added laborator1">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="a9bbeb48-8ae2-4801-8b48-6f95a4864473" name="Changes" comment="added laborator1" />
     <list id="0fd6ee0a-55ed-4cf8-81d7-176519bb4e20" name="do not commit" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,6 +152,7 @@
       <workItem from="1762933468476" duration="420000" />
       <workItem from="1763621486452" duration="816000" />
       <workItem from="1763889092796" duration="273000" />
+      <workItem from="1764747145867" duration="460000" />
     </task>
     <task id="LOCAL-00001" summary="added laborator1">
       <option name="closed" value="true" />
