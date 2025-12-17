@@ -6,18 +6,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="l03-01" />
-        <module name="product-store" />
         <module name="hello-world-spring" />
-        <module name="book-library" />
+        <module name="l09" />
         <module name="l02-02" />
         <module name="l02-01" />
+        <module name="l03-01" />
+        <module name="product-store" />
+        <module name="book-library" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="book-library" options="-parameters" />
+      <module name="l09" options="-parameters" />
       <module name="product-store" options="-parameters" />
     </option>
   </component>
