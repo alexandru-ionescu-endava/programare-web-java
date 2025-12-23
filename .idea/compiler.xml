@@ -2,10 +2,12 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="l10-02" />
         <module name="hello-world-spring" />
         <module name="l09" />
         <module name="l02-02" />
@@ -20,6 +22,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="book-library" options="-parameters" />
       <module name="l09" options="-parameters" />
+      <module name="l10-02" options="-parameters" />
       <module name="product-store" options="-parameters" />
     </option>
   </component>

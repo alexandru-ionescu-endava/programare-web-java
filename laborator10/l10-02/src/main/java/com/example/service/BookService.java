@@ -1,5 +1,6 @@
 package com.example.service;
 
+import com.example.exceptions.AuthorException;
 import com.example.model.dto.BookResponse;
 import com.example.exceptions.BookException;
 import com.example.mapper.BookMapper;
@@ -33,7 +34,7 @@ public class BookService {
     public BookResponse addBook(BookRequest bookRequest) {
 
         Author author = authorRepository.findById(bookRequest.authorId())
-                .orElseThrow(() -> new BookException("Author not found"));
+                .orElseThrow(() -> new AuthorException("Author not found"));
 
         BookDetail bookDetail = new BookDetail();
         bookDetail.setPublicationYear(bookRequest.publicationYear());
@@ -78,6 +79,12 @@ public class BookService {
                 .map(bookMapper::fromEntity).toList();
     }
 
+    public BookResponse findById(Long bookId) {
+        Book book = bookRepository.findById(bookId)
+                .orElseThrow(() -> new BookException("Book not found"));
+
+        return bookMapper.fromEntity(book);
+    }
 
     @Transactional
     public void add10() {

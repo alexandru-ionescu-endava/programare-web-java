@@ -2,9 +2,14 @@ package com.example.model.dto;
 
 import com.example.model.entities.Book;
 import com.example.model.entities.FormatType;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 @Data
 public class BookResponse {
 
@@ -17,6 +22,8 @@ public class BookResponse {
     private FormatType formatType;
 
     private String authorName;
+
+//    private AuthorResponse author;
 
 
 }

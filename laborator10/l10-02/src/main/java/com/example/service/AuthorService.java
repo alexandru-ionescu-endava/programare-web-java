@@ -1,10 +1,10 @@
 package com.example.service;
 
+import com.example.exceptions.AuthorException;
 import com.example.model.dto.AuthorResponse;
 import com.example.model.dto.CreateAuthorRequest;
 import com.example.mapper.AuthorMapper;
 import com.example.model.entities.Author;
-import com.example.model.entities.Book;
 import com.example.repository.AuthorRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +18,6 @@ public class AuthorService {
     private final AuthorRepository authorRepository;
     private final AuthorMapper authorMapper;
 
-
     @Autowired
     public AuthorService(AuthorRepository authorRepository,
                          AuthorMapper authorMapper) {
@@ -26,6 +25,13 @@ public class AuthorService {
         this.authorMapper = authorMapper;
     }
 
+
+    public AuthorResponse findById(Long authorId) {
+        Author author = authorRepository.findById(authorId)
+                .orElseThrow(() -> new AuthorException("Author not found"));
+
+        return authorMapper.fromEntity(author);
+    }
 
     public List<AuthorResponse> findAllAuthors() {
         List<Author> authors = authorRepository.findAll();
@@ -45,12 +51,14 @@ public class AuthorService {
 
 
     @Transactional
-    public void update(Long authorId, String newName) {
+    public AuthorResponse update(Long authorId, String newName) {
         Author author = authorRepository.findById(authorId)
-                .orElseThrow();
+                .orElseThrow(() -> new AuthorException("Author not found"));
 
         author.setName(newName);
-        authorRepository.save(author); // redundant due to transactional context
+        authorRepository.save(author);
+
+        return authorMapper.fromEntity(author);
     }
 
 

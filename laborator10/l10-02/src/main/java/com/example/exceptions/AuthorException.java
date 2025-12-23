@@ -1,9 +1,9 @@
 package com.example.exceptions;
 
-public class BookException
+public class AuthorException
         extends RuntimeException {
 
-    public BookException(String message) {
+    public AuthorException(String message) {
         super(message);
     }
 }
